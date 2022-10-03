@@ -25,11 +25,11 @@ label2.place(x= 30,y = 50)
 label3 = Label(window,text="Número Generado")
 label3.place(x= 30,y = 80)
 
-
-spinBox1 = Spinbox(window,to = 1000)
+#se añaden los estados de readonly en ambos spin para que el usuario manipule mediante el uso del widget exclusivamente los números
+spinBox1 = Spinbox(window,to = 1000, state="readonly")
 spinBox1.place(x= 170,y = 20)
 
-spinBox2 = Spinbox(window,to = 1000)
+spinBox2 = Spinbox(window,to = 1000, state="readonly")
 spinBox2.place(x= 170,y = 50)
 
 numeroGen = StringVar()
