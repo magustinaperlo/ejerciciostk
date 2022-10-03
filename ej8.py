@@ -7,26 +7,32 @@ window.config(bg = "white")
 window.resizable(False, False)
 
 def funcionSuma():
-    x1 = int(entry1.get())
-    x2 = int(entry2.get())
-    r = x1 + x1
+    x1 = float(entry1.get())
+    x2 = float(entry2.get())
+    #sumas la misma variable 2 veces
+    #r = x1 + x1
+    r =x1+x2
     resultado.set(r)
 
 def funcionResta():
-    x1 = int(entry1.get())
-    x2 = int(entry2.get())
-    r = x1 - x1
+    x1 = float(entry1.get())
+    x2 = float(entry2.get())
+    #operas con la misma variable
+    #r = x1 - x1
+    r=x1-x2
     resultado.set(r)
 
 def funcionProducto():
-    x1 = int(entry1.get())
-    x2 = int(entry2.get())
-    r = x1 * x1
+    x1 = float(entry1.get())
+    x2 = float(entry2.get())
+    #operas con la misma variable
+    #r = x1 * x1
+    r =x1*x2
     resultado.set(r)
 
 def funcionDivision():
-    x1 = int(entry1.get())
-    x2 = int(entry2.get())
+    x1 = float(entry1.get())
+    x2 = float(entry2.get())
     if x2 ==  0:
         r="No se puede dividir por 0."
         resultado.set(r)
