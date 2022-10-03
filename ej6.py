@@ -1,8 +1,21 @@
 from tkinter import *
+from tkinter import messagebox
+
+# def Añadir():
+#     lista.insert(END,entrada.get())
+#     entrada.set("")
+
+#debemos validar los ingresos vacios
 
 def Añadir():
-    lista.insert(END,entrada.get())
-    entrada.set("")
+    a = entrada.get() #Se obtiene valor en Entry
+   #validamos el ingreso para no almacenar datos erróneos
+    if (a.isspace() or len(a) <= 1):
+        messagebox.showinfo(message="El nombre de la película no debe comenzar con un espacio", title="Error")
+        entrada.set("")
+    else:
+        lista.insert(END, a) #Se inserta en Listbox
+        entrada.set("") #Se limpia el campo
     
 window=Tk()
 window.geometry("600x400")
